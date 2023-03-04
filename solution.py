@@ -2,7 +2,7 @@ from socket import *
 
 
 def smtp_client(port=1025, mailserver='127.0.0.1'):
-    msg = "\r\n My message\r\n"
+    msg = "\r\n My message"
     endmsg = "\r\n.\r\n"
 
     # Choose a mail server (e.g. Google mail server) if you want to verify the script beyond GradeScope
@@ -86,8 +86,6 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     #if recv7[:3] != '221':
      #   print('221 reply not received from server.')
     # Fill in end
-
-
 
 if __name__ == '__main__':
     smtp_client(1025, '127.0.0.1')
