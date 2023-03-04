@@ -38,7 +38,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
 
     # Send RCPT TO command and handle server response.
     # Fill in start
-    rcptToCommand = 'RCPT TO: hamaerisu@gmail.com\r\n'
+    rcptToCommand = 'RCPT TO: <hamaerisu@gmail.com>\r\n'
     clientSocket.send(rcptToCommand.encode())
     recv3 = clientSocket.recv(1024).decode()
     # Fill in end
@@ -59,7 +59,7 @@ def smtp_client(port=1025, mailserver='127.0.0.1'):
     # Message ends with a single period, send message end and handle server response.
     # Fill in start
     clientSocket.send(endmsg.encode())
-    recv6 - clientSocket.recv(1024).decode()
+    recv6 = clientSocket.recv(1024).decode()
     # Fill in end
 
     # Send QUIT command and handle server response.
